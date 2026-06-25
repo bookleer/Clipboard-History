@@ -1,0 +1,36 @@
+appId: com.clipboard-manager.app
+productName: 历史粘贴板
+copyright: Copyright © 2026
+
+directories:
+  output: release
+  buildResources: assets
+
+files:
+  - dist/**/*
+  - src/main/**/*
+  - src/preload/**/*
+  - package.json
+
+asar:
+  smartUnpack: true
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: assets/icon.ico
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 历史粘贴板
+  installerIcon: assets/icon.ico
+  uninstallerIcon: assets/icon.ico
+
+extraResources:
+  - from: assets/
+    to: assets/

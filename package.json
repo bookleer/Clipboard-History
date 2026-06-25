@@ -1,0 +1,36 @@
+{
+  "name": "clipboard-manager",
+  "version": "1.0.0",
+  "description": "Windows 历史粘贴板 - 记录剪贴板历史，支持文本和图片",
+  "main": "src/main/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && node scripts/electron-dev.js\"",
+    "electron:build": "vite build && electron-builder",
+    "electron:start": "node scripts/electron-start.js"
+  },
+  "keywords": [
+    "clipboard",
+    "history",
+    "paste",
+    "windows"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron-store": "^8.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sql.js": "^1.14.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "concurrently": "^9.2.3",
+    "cross-env": "^10.1.0",
+    "electron": "^28.3.3",
+    "electron-builder": "^26.15.3",
+    "vite": "^8.1.0",
+    "wait-on": "^9.0.10"
+  }
+}
